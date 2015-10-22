@@ -1,0 +1,23 @@
+<% @page_title = "News" %>
+
+  <div class="w-section listing-section">
+    <div class="w-container">
+      <h1 class="listing-heading">Latest news from Belfast Contained</h1>
+
+      <div class="w-row">
+        <% @post.published.sorted.each do |p| %>
+        <div class="w-col w-col-4">
+          <%= link_to({:action => 'post', :permalink => p.permalink}, :class => "w-inline-block side-feature-link-block") do %>
+            <div class="side-feature-image-div">
+              <%= image_tag p.image_url.to_s, :class => "side-feature-image" %>
+            </div>
+            <div class="side-feature-heading-div">
+              <h1 class="side-feature-heading-overlay"><%= p.title %></h1>
+            </div>
+          <% end %>
+        </div>
+        <% end %>
+      </div>
+
+    </div>
+  </div>

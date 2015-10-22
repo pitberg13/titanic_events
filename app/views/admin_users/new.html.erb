@@ -1,0 +1,89 @@
+<% @page_title = "New User" %>
+<div class="w-container index-title-continer">
+  <div class="w-row">
+    <div class="w-col w-col-9">
+      <div class="index-title-div">
+        <h1 class="section-heading">New User</h1>
+      </div>
+    </div>
+    <div class="w-col w-col-3">
+      <div class="w-form">
+      </div>
+    </div>
+  </div>
+</div>
+  <%= form_for(:admin_user, :url => {:action => 'create'}) do |f| %>
+<div class="w-section cms-section">
+  <div class="w-container cms-container">
+    <div class="form-block">
+      <%= error_messages_for(@admin_user) %>
+      <div>
+        <div class="w-row form-row">
+          <div class="w-col w-col-4">
+            <h4>USERNAME</h4>
+          </div>
+          <div class="w-col w-col-6">
+            <%= f.text_field(:username) %>
+          </div>
+          <div class="w-col w-col-2">
+          </div>
+        </div>
+        <div class="w-row form-row">
+          <div class="w-col w-col-4">
+            <h4>EMAIL</h4>
+          </div>
+          <div class="w-col w-col-6">
+            <%= f.text_field(:email) %>
+          </div>
+          <div class="w-col w-col-2">
+          </div>
+        </div>
+        <div class="w-row form-row">
+          <div class="w-col w-col-4">
+            <h4>PASSWORD</h4>
+          </div>
+          <div class="w-col w-col-6">
+            <%= f.text_field(:password) %>
+          </div>
+          <div class="w-col w-col-2">
+          </div>
+        </div>
+        <div class="w-row form-row">
+          <div class="w-col w-col-4">
+            <h4>CONFIRM PASSWORD</h4>
+          </div>
+          <div class="w-col w-col-6">
+            <%= f.text_field(:password_confirmation) %>
+          </div>
+          <div class="w-col w-col-2">
+          </div>
+        </div>
+        <div class="w-row form-row">
+          <div class="w-col w-col-4">
+            <h4>FIRST NAME</h4>
+          </div>
+          <div class="w-col w-col-6">
+            <%= f.text_field(:first_name) %>
+          </div>
+          <div class="w-col w-col-2">
+          </div>
+        </div>
+        <div class="w-row form-row">
+          <div class="w-col w-col-4">
+            <h4>LAST NAME</h4>
+          </div>
+          <div class="w-col w-col-6">
+            <%= f.text_field(:last_name) %>
+          </div>
+          <div class="w-col w-col-2">
+            <form style="float:left"><%= submit_tag("Save User", :class => 'save-button') %>
+            </form>
+          </div>
+        </div>
+        <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

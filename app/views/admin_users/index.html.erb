@@ -1,0 +1,73 @@
+<% if !flash[:notice].blank? %>
+<div class="w-container index-title-continer">
+  <div class="w-row">
+    <div class="w-col w-col-4 notice">
+      <%= flash[:notice] %>
+    </div>
+    <div class="w-col w-col-4">
+    </div>
+    <div class="w-col w-col-4">
+    </div>
+    <% end %>
+  </div>
+</div>
+
+<% @page_title = "Users List" %>
+<div class="w-container index-title-continer">
+  <div class="w-row">
+    <div class="w-col w-col-9">
+      <div class="index-title-div">
+        <h1 class="section-heading">Users</h1>
+      </div>
+    </div>
+    <div class="w-col w-col-3">
+      <div class="index-new-div">
+        <div class="w-form">
+          <form id="new-button" name="new-event" data-name="New Event">
+            <%= link_to("Add New User", {:action => 'new'}, :class => 'action-button') %>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="w-section cms-section">
+  <div class="w-container cms-container">
+    <div class="index-block">
+      <div class="w-row w-hidden-small w-hidden-tiny index-row title">
+        <div class="w-col w-col-2">
+          <h4>Username</h4>
+        </div>
+        <div class="w-col w-col-3">
+          <h4>email</h4>
+        </div>
+        <div class="w-col w-col-2">
+          <h4>First Name</h4>
+        </div>
+        <div class="w-col w-col-2">
+          <h4>Last Name</h4>
+        </div>
+        <div class="w-col w-col-3">
+          <h4>Actions</h4>
+        </div>
+      </div>
+    </br>
+      <% @admin_users.each do |user| %>
+      <div class="w-row index-row">
+        <div class="w-col w-col-2"><%= user.username %></div>
+        <div class="w-col w-col-3"><%= user.email %></div>
+        <div class="w-col w-col-2"><%= user.first_name %></div>
+        <div class="w-col w-col-2"><%= user.last_name %></div>
+        <div class="w-col w-col-3">
+          <div class="w-form">
+            <form id="action-list" name="action-list" data-name="Perform Action">
+              <%= link_to("Edit", {:action => 'edit', :id => user.id}, :class => 'action-button') %>
+              <%= link_to("Delete", {:action => 'delete', :id => user.id}, :class => 'action-button') %>
+            </form>
+          </div>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,54 @@
+<% @page_title = "Edit Post" %>
+
+<div class="w-container index-title-continer">
+  <div class="w-row">
+    <div class="w-col w-col-9">
+      <div class="index-title-div">
+        <h1 class="section-heading">Edit Post</h1>
+      </div>
+    </div>
+    <div class="w-col w-col-3">
+      <div class="w-form">
+      </div>
+    </div>
+  </div>
+</div>
+  <%= form_for(:post, :html => {:multipart => true}, :url => {:action => 'update', :id => @post.id}) do |f| %>
+<div class="w-section cms-section">
+  <div class="w-container cms-container">
+    <div class="form-block">
+      <div>
+          <%= error_messages_for(@post) %>
+      </div>
+      <div>
+        <div class="w-row form-row">
+          <div class="w-col w-col-9">
+            <h3>POST TITLE  <%= f.text_field(:title) %></h3>
+            <h4>PERMALINK  <%= f.text_field(:permalink) %></h4>
+          </div>
+          <div class="w-col w-col-3">
+            <h4>PUBLISHED</h4><%= f.check_box(:published) %>
+            <h4>FEATURED</h4><%= f.check_box(:featured) %>
+            <h4>POSITION  <%= f.select(:position, 1..@post_count) %></h4>
+          </div>
+        </div>
+      </div>
+      <div class="w-row">
+        <div class="w-col w-col-9 form-row">
+          <h3>CONTENT</h3>
+          <%= f.cktext_area(:content) %>
+        </div>
+        <div class="w-col w-col-3">
+          <h3>IMAGE</h3>
+          </br>
+          <%= f.file_field :image %>
+          <div>
+            <form style="float:left"><%= submit_tag("Save Post", :class => 'save-button') %>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <% end %>
+</div>

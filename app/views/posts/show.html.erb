@@ -1,0 +1,17 @@
+<div class="w-container post-container"><%= image_tag @post.image_url.to_s, :class => "featured-image" %>
+    <h1 class="post-title"><%= @post.title %></h1>
+    <%= link_to({:action => 'news'}, :class => "w-hidden-tiny w-inline-block more-news-button") do %>
+      <div class="more-event-button-text overlay">MORE&nbsp;NEWS&nbsp;&gt;</div>
+    <% end %>
+    <div class="w-row content-body-row">
+      <div class="w-col w-col-9 content-body-column">
+        <div class="post-content-div">
+          <div class="news-post-content"><%= raw(@post.content) %></div>
+        </div>
+      </div>
+      <div class="w-col w-col-3 w-hidden-small w-hidden-tiny ad-block-right-column">
+
+      </div>
+    </div>
+
+  </div>

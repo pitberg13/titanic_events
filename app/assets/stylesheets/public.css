@@ -1,0 +1,39 @@
+/*
+  Place all the styles related to the matching controller here.
+  They will automatically be included in application.css.
+*/
+.google-maps {
+    position: relative;
+    padding-bottom: 75%;
+    height: 0;
+    overflow: hidden;
+}
+.google-maps iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.mailchimp-form-heading {
+  font-family: Muli, sans-serif;
+  color: white;
+  font-size: 1.6em;
+}
+
+.mailchimp-column {
+  padding-right: 15px;
+  padding-bottom: 33px;
+}
+
+.textLink {
+  color: #bd2329;
+  text-decoration: none;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}

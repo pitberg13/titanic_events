@@ -1,0 +1,116 @@
+<% @page_title = "Cultural Cargo" %>
+
+<div class="w-section featured-container">
+  <div class="w-container">
+    <div class="w-row home-row-1">
+      <div class="w-col w-col-8 w-col-stack feature-column-1">
+        <% @event.featured.sorted.limit(1).each do |e| %>
+        <%= link_to({:action => 'event', :permalink => e.permalink}, :class => "w-inline-block main-feature-link-block") do %>
+          <div class="main-feature-image-div">
+            <%= image_tag e.image_url.to_s, :class => "main-feature-image" %>
+          </div>
+          <div class="main-feature-title-div">
+            <h1 class="main-feature-heading-overlay"><%= e.title %></h1>
+          </div>
+          <div class="textLink" class="main-feature-summary-text"><p class="textLink"><%= raw(e.content.first(149)) %>...<h4>Read More</h4></p></div>
+        <% end %>
+        <% end %>
+      </div>
+      <div class="w-col w-col-4 w-col-stack w-clearfix feature-column-2">
+        <% @post.featured.published.sorted.limit(2).each do |p| %>
+        <%= link_to({:action => 'post', :permalink => p.permalink}, :class => "w-inline-block side-feature-link-block") do %>
+          <div class="side-feature-image-div">
+            <%= image_tag p.image_url.to_s, :class => "side-feature-image" %>
+          </div>
+          <div class="side-feature-heading-div">
+            <h1 class="side-feature-heading-overlay"><%= p.title %></h1>
+          </div>
+        <% end %>
+        <% end %>
+          <%= link_to({:action => 'programme'}, :class => "w-inline-block home-more-new-button") do %>
+            <div class="more-event-button-text">MORE&nbsp;EVENTS&nbsp;&gt;</div>
+          <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="w-section intro-copy-section">
+  <div class="w-container intr-section-container">
+    <div class="tagline-div">
+      <div class="tagline-text-block">
+        <h1 class="tagline-header">CULTURAL&nbsp;CARGO</h1>
+        <div class="tagline-text">Belfast Contained is an innovative new regeneration project from the team behind Belfast's T13.</div>
+      </div><%= link_to({:action => 'about'}, :class => "w-inline-block home-button-div left") do %><h1 class="home-button-text">WANT TO KNOW MORE?</h1><% end %><%= link_to({:action => 'programme'}, :class => "w-inline-block home-button-div right") do %><h1 class="home-button-text">SEE&nbsp;WHAT'S&nbsp;HAPPENING?</h1><% end %>
+    </div>
+  </div>
+</div>
+<div class="w-section next-events-section">
+  <div class="w-container home-next-events">
+    <div class="w-row heading-row home">
+      <div class="w-col w-col-6 heading-row-left">
+        <h1 class="headin-row-text">Next events</h1>
+      </div>
+      <div class="w-col w-col-6 w-hidden-small w-hidden-tiny w-clearfix heading-row-right">
+        <%= link_to({:action => 'programme'}, :class => "w-inline-block home-more-new-button") do %>
+          <div class="more-event-button-text">MORE&nbsp;EVENTS&nbsp;&gt;</div>
+        <% end %>
+      </div>
+    </div>
+    <div class="w-row post-strip">
+      <% @event.upcoming.live.sorted.limit(4).each do |e| %>
+      <div class="w-col w-col-3">
+        <%= link_to({:action => 'event', :permalink => e.permalink}, :class => "w-inline-block _4strip-link-block") do %>
+          <div class="strip-image-div"><%= image_tag e.image_url.to_s, :class => "_4strip-imagee" %>
+          </div>
+          <div class="_4strip-heading-div">
+            <h1 class="strip-heading"><%= e.title %></h1>
+          </div>
+      </div>
+      <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
+<div class="w-section intro-text-section">
+  <div class="w-container intr-section-container solid">
+    <div class="seed-text-div">
+      <h1 class="home-intro-header centre head">Seed of the city</h1>
+      <div class="home-intro-copy centre">Contained will see two venues play host to an incredibly diverse programme of gatherings, events and experiences.</div>
+    </div>
+    <div class="home-venue-images-div"><img class="home-intro-image" src="http://res.cloudinary.com/titanicmedia/image/upload/v1445503562/CONTAINED/CON-homepage-village.jpg"><img class="home-intro-image" src="http://res.cloudinary.com/titanicmedia/image/upload/c_scale,w_500/v1445410400/CONTAINED/Contained2.jpg">
+    </div>
+    <div class="w-row">
+      <div class="w-col w-col-6 w-clearfix home-intro-partners-column">
+        <h1 class="home-intro-header">Contained Pop-up Village</h1>
+        <%= link_to({:action => 'containedvillage'}, :class => "w-inline-block home-more-new-button containedvillagemore") do %>
+          <div class="more-event-button-text">EVENTS AT CONTAINED VILLAGE ></div>
+        <% end %>
+      </div>
+      <div class="w-col w-col-6 w-clearfix home-intro-copy-column">
+        <h1 class="home-intro-header">Contained13</h1>
+        <%= link_to({:action => 'contained13'}, :class => "w-inline-block home-more-new-button containedvillagemore") do %>
+          <div class="more-event-button-text">EVENTS AT CONTAINED13 ></div>
+        <% end %>
+      </div>
+    </div>
+    <div class="google-maps"><iframe src="https://mapsengine.google.com/map/embed?mid=zXSWRU5W04w8.kU99GLXUOq38"></iframe></div>
+    <div class="seed-text-div">
+      <div class="home-intro-copy centre">If you would like to get involved then...</div><a class="w-inline-block get-involved-button" href="/#contact"><h1 class="get-involved-button-text">Click Me!</h1></a>
+    </div>
+  </div>
+</div>
+<div class="w-section w-hidden-small w-hidden-tiny home-content">
+  <div class="w-container">
+    <div class="w-row heading-row">
+      <div class="w-col w-col-9 heading-row-left">
+        <h1 class="headin-row-text white insta">Meanwhile on Instagram</h1>
+      </div>
+      <div class="w-col w-col-3 heading-row-right"></div>
+    </div>
+    <div class="w-embed w-iframe w-script instagram-feed">
+      <!-- INSTANSIVE WIDGET -->
+      <script src="//instansive.com/widget/js/instansive.js"></script>
+      <iframe src="//instansive.com/widgets/2980e2f5f4821661c48f81c645c6c454f553c870.html" id="instansive_2980e2f5f4" name="instansive_2980e2f5f4" scrolling="no" allowtransparency="true" class="instansive-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
+    </div>
+  </div>
+</div>

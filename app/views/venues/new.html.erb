@@ -1,0 +1,34 @@
+<% @page_title = "New Venue" %>
+
+<div class="w-container index-title-continer">
+  <div class="w-row">
+    <div class="w-col w-col-9 w-col-medium-6 w-col-small-6">
+      <div class="index-title-div">
+        <h1 class="section-heading">New Venue</h1>
+      </div>
+    </div>
+    <div class="w-col w-col-3 w-col-medium-6 w-col-small-6">
+      <div class="index-new-div"></div>
+    </div>
+  </div>
+</div>
+<div class="w-section cms-section">
+  <div class="w-container cms-container">
+  <%= form_for(:venue, :url => {:action => 'create'}) do |f| %>
+    <div class="index-block">
+      <div class="w-row w-hidden-small w-hidden-tiny index-row title venue-category">
+        <div class="w-col w-col-9 field-column">
+          <h4>Venue Name  <%= f.text_field(:venue_name) %></h4>
+        </div>
+        <div class="w-col w-col-3">
+          <div class="w-form">
+            <form id="email-form-2" name="email-form-2" data-name="Email Form 2">
+              <%= submit_tag("Create Venue", :class => 'action-button') %>
+            </form>
+          </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,79 @@
+<% if !flash[:notice].blank? %>
+<div class="w-container index-title-continer">
+  <div class="w-row">
+    <div class="w-col w-col-4 notice">
+      <%= flash[:notice] %>
+    </div>
+    <div class="w-col w-col-4">
+    </div>
+    <div class="w-col w-col-4">
+    </div>
+    <% end %>
+  </div>
+</div>
+
+<% @page_title = "Post List" %>
+
+<div class="w-container index-title-continer">
+  <div class="w-row">
+    <div class="w-col w-col-9">
+      <div class="index-title-div">
+        <h1 class="section-heading">News</h1>
+      </div>
+    </div>
+    <div class="w-col w-col-3">
+      <div class="index-new-div">
+        <div class="w-form">
+          <form id="new-button" name="new-event" data-name="New Event">
+            <%= link_to("Add New Post", {:action => 'new'}, :class => 'action-button') %>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="w-section cms-section">
+  <div class="w-container cms-container">
+    <div class="index-block">
+      <div class="w-row w-hidden-small w-hidden-tiny index-row title">
+        <div class="w-col w-col-2">
+          <h4>Title</h4>
+        </div>
+        <div class="w-col w-col-1">
+          <h4>Status</h4>
+        </div>
+        <div class="w-col w-col-2">
+          <h4>Featured</h4>
+        </div>
+        <div class="w-col w-col-1">
+          <h4>#</h4>
+        </div>
+        <div class="w-col w-col-2">
+          <h4>Updated at</h4>
+        </div>
+        <div class="w-col w-col-4">
+          <h4>Actions</h4>
+        </div>
+      </div>
+    </br>
+      <% @posts.each do |post| %>
+      <div class="w-row index-row">
+        <div class="w-col w-col-2"><%= post.title %></div>
+        <div class="w-col w-col-1"><%= post.published ? 'Live' : 'Draft' %></div>
+        <div class="w-col w-col-2"><%= post.featured ? 'Feature' : 'Not-featured' %></div>
+        <div class="w-col w-col-1"><%= post.position %></div>
+        <div class="w-col w-col-2">><%= post.updated_at %></div>
+        <div class="w-col w-col-4">
+          <div class="w-form">
+            <form id="action-list" name="action-list" data-name="Perform Action">
+              <%= link_to("Show", {:controller => 'public', :action => 'post', :id => post.id}, :class => 'action-button', target: "_blank") %>
+              <%= link_to("Edit", {:action => 'edit', :id => post.id}, :class => 'action-button') %>
+              <%= link_to("Delete", {:action => 'delete', :id => post.id}, :class => 'action-button') %>
+            </form>
+          </div>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,43 @@
+<% @page_title = "Delete Category: #{@category.category_title}" %>
+
+
+<div class="w-container index-title-continer">
+  <div class="w-row">
+    <div class="w-col w-col-9">
+      <div class="index-title-div">
+        <h1 class="section-heading">Delete Category</h1>
+      </div>
+    </div>
+    <div class="w-col w-col-3">
+      <div class="w-form">
+      </div>
+    </div>
+  </div>
+</div>
+<div class="w-section cms-section">
+  <div class="w-container cms-container">
+    <div class="form-block">
+        <div>
+          <div class="w-row form-row">
+            <div class="w-col w-col-4"></div>
+            <div class="w-col w-col-4">
+              <%= form_for(:category, :url => {:action => 'destroy', :id => @category.id}) do |f| %>
+              <h4>Are you sure you want to permanently remove this category?</h4>
+            </div>
+            <div class="w-col w-col-4"></div>
+          </div>
+          <div class="w-row form-row">
+            <div class="w-col w-col-4">  </div>
+            <div class="w-col w-col-4"><%= @category.category_title %></div>
+            <div class="w-col w-col-4"></div>
+          </div>
+          <div class="w-row form-row">
+            <div class="w-col w-col-4"></div>
+            <div class="w-col w-col-4"><%= submit_tag("Delete Category", :class => 'action-button', :onclick => "return confirm('You sure you want to bin this?')") %></div>
+            <div class="w-col w-col-4"></div>
+        </div>
+      </div>
+      </div>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,42 @@
+<% @page_title = "Delete Admin User: #{@admin_user.username}" %>
+
+<div class="w-container index-title-continer">
+  <div class="w-row">
+    <div class="w-col w-col-9">
+      <div class="index-title-div">
+        <h1 class="section-heading">Delete User</h1>
+      </div>
+    </div>
+    <div class="w-col w-col-3">
+      <div class="w-form">
+      </div>
+    </div>
+  </div>
+</div>
+<div class="w-section cms-section">
+  <div class="w-container cms-container">
+    <div class="form-block">
+        <div>
+          <div class="w-row form-row">
+            <div class="w-col w-col-4"></div>
+            <div class="w-col w-col-4">
+              <%= form_for(:admin_user, :url => {:action => 'destroy', :id => @admin_user.id}) do |f| %>
+              <h4>Are you sure you want to permanently delete this user?</h4>
+            </div>
+            <div class="w-col w-col-4"></div>
+          </div>
+          <div class="w-row form-row">
+            <div class="w-col w-col-4">  </div>
+            <div class="w-col w-col-4"><%= @admin_user.username %></div>
+            <div class="w-col w-col-4"></div>
+          </div>
+          <div class="w-row form-row">
+            <div class="w-col w-col-4"></div>
+            <div class="w-col w-col-4"><%= submit_tag("Delete User", :class => 'action-button', :onclick => "return confirm('You sure you want to delete them?')") %></div>
+            <div class="w-col w-col-4"></div>
+        </div>
+      </div>
+      </div>
+    </div>
+  <% end %>
+</div>

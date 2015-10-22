@@ -1,0 +1,33 @@
+<% @page_title = @event.title %>
+
+<div class="w-container post-container"><%= image_tag @event.image_url.to_s, :class => "featured-image" %>
+    <h1 class="post-title"><%= @event.title %></h1>
+    <%= link_to({:action => 'programme'}, :class => "w-hidden-tiny w-inline-block more-news-button") do %>
+      <div class="more-event-button-text overlay">MORE&nbsp;EVENTS&nbsp;&gt;</div>
+    <% end %>
+    <div class="w-row event-info-row">
+      <div class="w-col w-col-6 w-clearfix event-info-column">
+
+        <h1 class="event-datetime-heading"><%= @event.event_datetime.strftime("%H.%M %A %d %B") %></h1>
+        <% @event.venues.each do |v| %>
+        <h1 class="event-venue-heading"><%= event.venue_name %></h1>
+        <% end %>
+        <% @event.categories.each do |c| %>
+        <h1 class="w-hidden-small w-hidden-tiny event-category-heading"><%= event.category_title %></h1>
+        <% end %>
+      </div>
+      <div class="w-col w-col-6 ticket-info">
+        <div class="w-embed ticket-code"></div>
+      </div>
+    </div>
+    <div class="w-row content-body-row event">
+      <div class="w-col w-col-9 content-body-column event">
+        <div class="post-content-div">
+          <div class="news-post-content"><%= raw(@event.content) %></div>
+        </div>
+      </div>
+      <div class="w-col w-col-3 w-hidden-small w-hidden-tiny ad-block-right-column">
+      </div>
+    </div>
+
+  </div>

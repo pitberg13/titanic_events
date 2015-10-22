@@ -1,0 +1,61 @@
+<% @page_title = "Arts & culture" %>
+
+<div class="w-container filter-container">
+    <div class="w-row listing-page-heading-row">
+      <div class="w-col w-col-2">
+        <h3 class="listing-page-heading">Filter by category</h3>
+      </div>
+      <div class="w-col w-col-10">
+        <%= link_to({action: "artsculture"}, class: "w-inline-block category-button") do %>
+          <div class="category-button-text">ARTS &amp; CULTURE</div>
+        <% end %>
+        <%= link_to({action: "festivalsfamily"}, class: "w-inline-block category-button") do %>
+          <div class="category-button-text">FESTIVALS &amp; FAMILIES</div>
+        <% end %>
+        <%= link_to({action: "fitnesswellbeing"}, class: "w-inline-block category-button") do %>
+          <div class="category-button-text">FITNESS &amp; WELLBEING</div>
+        <% end %>
+        <%= link_to({action: "fooddrink"}, class: "w-inline-block category-button") do %>
+          <div class="category-button-text">FOOD &amp; DRINK</div>
+        <% end %>
+        <%= link_to({action: "moviestheatre"}, class: "w-inline-block category-button") do %>
+          <div class="category-button-text">MOVIES &amp; THEATRE</div>
+        <% end %>
+        <%= link_to({action: "musicdance"}, class: "w-inline-block category-button") do %>
+          <div class="category-button-text">MUSIC &amp; DANCE</div>
+        <% end %>
+      </div>
+    </div>
+    <div class="w-row listing-page-heading-row">
+      <div class="w-col w-col-2">
+        <h3 class="listing-page-heading">Filter by venue</h3>
+      </div>
+      <div class="w-col w-col-10">
+        <%= link_to({action: "containedvillage"}, class: "w-inline-block category-button") do %>
+          <div class="category-button-text">CONTAINED VILLAGE</div>
+        <% end %>
+        <%= link_to({action: "contained13"}, class: "w-inline-block category-button") do %>
+          <div class="category-button-text">CONTAINED13</div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <div class="w-section listing-section">
+    <div class="w-container">
+      <h1 class="listing-heading">Upcoming events</h1>
+      <div class="w-row listing-strip-3across">
+        <% @event.upcoming.live.artsculture.each do |e| %>
+        <div class="w-col w-col-4 upcomingeventcolumn">
+          <%= link_to({:action => 'event', :permalink => e.permalink}, :class => "w-inline-block side-feature-link-block") do %>
+            <div class="side-feature-image-div">
+              <%= image_tag e.image_url.to_s, :class => "side-feature-image" %>
+            </div>
+            <div class="side-feature-heading-div">
+              <h1 class="side-feature-heading-overlay"><%= e.title %></h1>
+            </div>
+          <% end %>
+        </div>
+        <% end %>
+      </div>
+    </div>
+  </div>

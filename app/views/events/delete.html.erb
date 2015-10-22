@@ -1,0 +1,42 @@
+<% @page_title = "Delete Event" %>
+
+<div class="w-container index-title-continer">
+  <div class="w-row">
+    <div class="w-col w-col-9">
+      <div class="index-title-div">
+        <h1 class="section-heading">Delete Event</h1>
+      </div>
+    </div>
+    <div class="w-col w-col-3">
+      <div class="w-form">
+      </div>
+    </div>
+  </div>
+</div>
+<div class="w-section cms-section">
+  <div class="w-container cms-container">
+    <div class="form-block">
+        <div>
+          <div class="w-row form-row">
+            <div class="w-col w-col-4"></div>
+            <div class="w-col w-col-4">
+              <%= form_for(:section, :url => {:action => 'destroy', :id => @event.id}) do |f| %>
+              <h4>Are you sure you want to permanently delete this event?</h4>
+            </div>
+            <div class="w-col w-col-4"></div>
+          </div>
+          <div class="w-row form-row">
+            <div class="w-col w-col-4">  </div>
+            <div class="w-col w-col-4"><%= @event.title %></div>
+            <div class="w-col w-col-4"></div>
+          </div>
+          <div class="w-row form-row">
+            <div class="w-col w-col-4"></div>
+            <div class="w-col w-col-4"><%= submit_tag("Delete Event", :class => 'action-button', :onclick => "return confirm('You sure you want to bin this?')") %></div>
+            <div class="w-col w-col-4"></div>
+        </div>
+      </div>
+      </div>
+    </div>
+  <% end %>
+</div>

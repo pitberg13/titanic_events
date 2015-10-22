@@ -1,0 +1,237 @@
+<% @page_title = "About" %>
+
+  <div class="w-section featured-container">
+    <div class="w-container">
+      <div class="w-row home-row-1">
+        <div class="w-col w-col-9 w-col-stack feature-column-1">
+          <div class="about-copy-block"><strong>From the team behind Belfast’s <a class="textLink" href="http://T13.tv">T13</a>, a city of european significance and monumental opportunity is soon to experience a genuine cultural innovation in the arrival of Belfast Contained. &nbsp;Belfast will be brought to life through a dynamic program of events, gatherings and experiences taking place between the acclaimed T13 Hub and a brand new pop up eco venue - with cultural vibrations being felt throughout the city and beyond.</strong>
+            <br>
+            <br><a class="textLink" href="http://squarepit.com">The Square Pit Collaborative</a> are breaking new ground with this latest city solution, and we have accordingly developed a new operating framework within which the Belfast Contained project will be developed, programmed, operated and reviewed.&nbsp;
+            <br>
+            <br>
+            <br>It reads:</div>
+          <div class="about-copy-block _2"><strong>Consultation</strong> - we will be consulting cross sector stakeholders throughout through our <a class="textLink" href="http://beheardbelfast.com">BeHeard</a> partners.
+            <br>
+            <br><strong>Collaboration</strong> - programmed through partnership with public / private / charitable / creative sectors creating diverse content.&nbsp;
+            <br>
+            <br><strong>Regeneration</strong> - re-defining a city space to help link neighbouring communities with eco friendly pilot project.
+            <br>
+            <br><strong>Sustainability</strong> - equipping this community with the support and infrastructure required for sustainable development .</div>
+          <div class="about-copy-block _3">Just like T13, Belfast Contained will mean many different things to the people and organisations who experience it. With this in mind we decided not to restrict these info sections to a carefully articulated piece of copy. Instead we went back to some of our original thoughts during the creative sessions from where Belfast Contained emerged, and has since continued to evolve. &nbsp;So...</div>
+        </div>
+        <div class="w-col w-col-3 w-col-stack w-hidden-medium w-hidden-small w-hidden-tiny feature-column-2 about">
+          <% @post.featured.published.sorted.limit(3).each do |p| %>
+          <%= link_to({:action => 'post', :permalink => p.permalink}, :class => "w-inline-block side-feature-link-block") do %>
+            <div class="side-feature-image-div">
+              <%= image_tag p.image_url.to_s, :class => "side-feature-image" %>
+            </div>
+            <div class="side-feature-heading-div">
+              <h1 class="side-feature-heading-overlay"><%= p.title %></h1>
+            </div>
+          <% end %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="w-section what-is-section">
+    <div class="w-container what-container">
+      <div class="w-row what-is-row _1">
+        <div class="w-col w-col-6 w-clearfix what-is-row-1-column-1" data-ix="appear-on-scroll">
+          <h1 class="what-is-heading">WHAT is it?</h1>
+          <div class="what-is-copy-block">A creative hub for culture &amp; commerce. &nbsp;
+            <br>The DNA of T13 implanted city side. &nbsp;
+            <br>A set created from recycled shipping containers and other recycled material. &nbsp;
+            <br>A pop up village of culture &amp; enterprise. &nbsp;
+            <br>A pioneering eco project A new dimension to cultural programming in this city.</div>
+          <a class="w-lightbox w-inline-block what-is-lightbox" href="#"><img class="what-is-it-image" src="http://res.cloudinary.com/titanicmedia/image/upload/v1445497200/CONTAINED/SquerPit-BridgeLineZone1_Stage-Cam01_copy.jpg">
+            <script type="application/json" class="w-json">
+              { "items": [{
+                "url": "http://res.cloudinary.com/titanicmedia/image/upload/v1445497200/CONTAINED/SquerPit-BridgeLineZone1_Stage-Cam01_copy.jpg",
+                "fileName": "561606e0794d876a2b4e9561_SquerPit-BridgeLineZone1_Stage-Cam01 copy.jpeg",
+                "origFileName": "SquerPit-BridgeLineZone1_Stage-Cam01 copy.jpeg",
+                "width": 636,
+                "height": 425,
+                "size": 70160,
+                "type": "image"
+              }] }
+            </script>
+          </a>
+        </div>
+        <div class="w-col w-col-6 w-clearfix what-is-row-1-column-2" data-ix="appear-on-scroll-who-where">
+          <h1 class="what-is-heading">WHERE is it?</h1>
+          <div class="what-is-copy-block">Corporation street opposite the Royal Mail sorting office.
+            <br>Right beside the Obel building. Underneath the M3 flyover.
+            <br>The old Seacat docking ramp.
+            <br>100m after passing Direct Wine Shipments on the left.
+            <br>400m from Belfast Waterfront building.
+            <br>120m from the newly developed footbridge.
+            <br>100m from the big fish on the left.
+            <br>50m from the Lagan Boat Tour dock.</div>
+          <a class="w-lightbox w-inline-block what-is-lightbox" href="#"><img class="where-is-it-image" src="http://res.cloudinary.com/titanicmedia/image/upload/v1445501080/CONTAINED/COn-contained-map-clip.jpg">
+            <script type="application/json" class="w-json">
+              { "items": [{
+                "url": "http://res.cloudinary.com/titanicmedia/image/upload/v1445501080/CONTAINED/COn-contained-map-clip.jpg",
+                "fileName": "5616073100652b7b5442331e_Screen Shot 2015-10-08 at 5.02.58 pm.png",
+                "origFileName": "Screen Shot 2015-10-08 at 5.02.58 pm.png",
+                "width": 1008,
+                "height": 670,
+                "size": 1452333,
+                "type": "image"
+              }] }
+            </script>
+          </a>
+        </div>
+      </div>
+      <div class="w-row what-is-row _2" data-ix="appear-on-scroll">
+        <div class="w-col w-col-4 what-is-row-2-column _1" data-ix="appear-on-scroll">
+          <h1 class="what-is-heading">WHEN is it?</h1>
+          <div class="what-is-copy-block row-2">Media launch event of Contained Village on Thu 22nd October
+            <br>from 1-3pm.
+            <br>
+            <br>Program of events kicked off with Pop Up Film Club on 18th Sept.
+            <br>
+            <br>Continued with NI Coffee Fest &amp; Cypher Sessions V.<iframe width="260" height="146" src="https://www.youtube.com/embed/D8hRFYeP7Bw" frameborder="0" allowfullscreen></iframe></div>
+          <div class="aboutbottomimagesdiv">
+            <a class="w-lightbox w-inline-block what-is-lightbox bottom-row" href="#"><img class="about-bottom-lightbox-placeholder" src="http://res.cloudinary.com/titanicmedia/image/upload/v1445501257/CONTAINED/CON-tarantino-image.jpg">
+              <script type="application/json" class="w-json">
+                { "items": [{
+                  "url": "http://res.cloudinary.com/titanicmedia/image/upload/v1445501257/CONTAINED/CON-tarantino-image.jpg",
+                  "fileName": "56160a4e39c95e7470ab295b_con-tarantino-image.jpg",
+                  "origFileName": "con-tarantino-image.jpg",
+                  "width": 1000,
+                  "height": 703,
+                  "size": 121262,
+                  "type": "image"
+                }] }
+              </script>
+            </a>
+            <a class="w-lightbox w-inline-block what-is-lightbox bottom-row" href="#"><img class="about-bottom-lightbox-placeholder" src="http://res.cloudinary.com/titanicmedia/image/upload/v1445501256/CONTAINED/CON-coffee-fest-image.jpg">
+              <script type="application/json" class="w-json">
+                { "items": [{
+                  "url": "http://res.cloudinary.com/titanicmedia/image/upload/v1445501256/CONTAINED/CON-coffee-fest-image.jpg",
+                  "fileName": "56160a5c794d876a2b4e95c1_11999663_985215621529690_4927600099982776853_o.jpg",
+                  "origFileName": "11999663_985215621529690_4927600099982776853_o.jpg",
+                  "width": 1280,
+                  "height": 853,
+                  "size": 93878,
+                  "type": "image"
+                }] }
+              </script>
+            </a>
+            <a class="w-lightbox w-inline-block what-is-lightbox bottom-row" href="#"><img class="about-bottom-lightbox-placeholder" src="http://res.cloudinary.com/titanicmedia/image/upload/v1445501258/CONTAINED/CON-cypher-image.jpg">
+              <script type="application/json" class="w-json">
+                { "items": [{
+                  "url": "http://res.cloudinary.com/titanicmedia/image/upload/v1445501258/CONTAINED/CON-cypher-image.jpg",
+                  "fileName": "56160a8600652b7b544233a5_12017666_987858667932052_7609469471716567535_o.jpg",
+                  "origFileName": "12017666_987858667932052_7609469471716567535_o.jpg",
+                  "width": 2048,
+                  "height": 1365,
+                  "size": 837037,
+                  "type": "image"
+                }] }
+              </script>
+            </a>
+          </div>
+        </div>
+        <div class="w-col w-col-4 what-is-row-2-column _2" data-ix="appear-on-scroll-who-where">
+          <h1 class="what-is-heading">WHO is it?</h1>
+          <div class="what-is-copy-block row-2">Square Pit are the principal, with support from the collaborative &amp; T13 Belfast key operators including;
+            <br> <a class="textLink" href="http://guerrillashout.com/">Guerrilla Shout<a>, <a class="textLink" href="http://ironfit.tv/">IronFit</a>, <a class="textLink" href="http://titanicmedia.tv/">Titanic Media</a>.</div>
+            <div class="aboutbottomimagesdiv">
+              <a class="w-lightbox w-inline-block what-is-lightbox bottom-row" href="#"><img class="about-bottom-lightbox-placeholder" src="http://res.cloudinary.com/titanicmedia/image/upload/c_scale,h_1000/v1445497199/CONTAINED/con-tm-image.jpg">
+                <script type="application/json" class="w-json">
+                  { "items": [{
+                    "url": "http://res.cloudinary.com/titanicmedia/image/upload/c_scale,h_1000/v1445497199/CONTAINED/con-tm-image.jpg",
+                    "fileName": "56160a4e39c95e7470ab295b_con-tarantino-image.jpg",
+                    "origFileName": "con-tarantino-image.jpg",
+                    "width": 1000,
+                    "height": 703,
+                    "size": 121262,
+                    "type": "image"
+                  }] }
+                </script>
+              </a>
+              <a class="w-lightbox w-inline-block what-is-lightbox bottom-row" href="#"><img class="about-bottom-lightbox-placeholder" src="http://res.cloudinary.com/titanicmedia/image/upload/c_scale,w_1000/v1445497209/CONTAINED/11958129_1057698104243448_625280889715734991_o.jpg">
+                <script type="application/json" class="w-json">
+                  { "items": [{
+                    "url": "http://res.cloudinary.com/titanicmedia/image/upload/c_scale,w_1000/v1445497209/CONTAINED/11958129_1057698104243448_625280889715734991_o.jpg",
+                    "fileName": "56160a5c794d876a2b4e95c1_11999663_985215621529690_4927600099982776853_o.jpg",
+                    "origFileName": "11999663_985215621529690_4927600099982776853_o.jpg",
+                    "width": 1280,
+                    "height": 853,
+                    "size": 93878,
+                    "type": "image"
+                  }] }
+                </script>
+              </a>
+              <a class="w-lightbox w-inline-block what-is-lightbox bottom-row" href="#"><img class="about-bottom-lightbox-placeholder" src="http://res.cloudinary.com/titanicmedia/image/upload/v1445501693/CONTAINED/CON-guerrillashout-image.jpg">
+                <script type="application/json" class="w-json">
+                  { "items": [{
+                    "url": "http://res.cloudinary.com/titanicmedia/image/upload/v1445501693/CONTAINED/CON-guerrillashout-image.jpg",
+                    "fileName": "56160a8600652b7b544233a5_12017666_987858667932052_7609469471716567535_o.jpg",
+                    "origFileName": "12017666_987858667932052_7609469471716567535_o.jpg",
+                    "width": 2048,
+                    "height": 1365,
+                    "size": 837037,
+                    "type": "image"
+                  }] }
+                </script>
+              </a>
+            </div>
+        </div>
+        <div class="w-col w-col-4 what-is-row-2-column _3" data-ix="appear-on-scroll-who-where">
+          <h1 class="what-is-heading">HOW will it be done?</h1>
+          <div class="what-is-copy-block row-2 column-3">Consultation
+            <br>Collaboration
+            <br>Regeneration
+            <br>Sustainability</div>
+            <div class="aboutbottomimagesdiv">
+              <a class="w-lightbox w-inline-block what-is-lightbox bottom-row" href="#"><img class="about-bottom-lightbox-placeholder" src="http://res.cloudinary.com/titanicmedia/image/upload/v1445497198/CONTAINED/SP-web-T13.png">
+                <script type="application/json" class="w-json">
+                  { "items": [{
+                    "url": "http://res.cloudinary.com/titanicmedia/image/upload/v1445497198/CONTAINED/SP-web-T13.png",
+                    "fileName": "56160a4e39c95e7470ab295b_con-tarantino-image.jpg",
+                    "origFileName": "con-tarantino-image.jpg",
+                    "width": 1000,
+                    "height": 703,
+                    "size": 121262,
+                    "type": "image"
+                  }] }
+                </script>
+              </a>
+              <a class="w-lightbox w-inline-block what-is-lightbox bottom-row" href="#"><img class="about-bottom-lightbox-placeholder" src="http://res.cloudinary.com/titanicmedia/image/upload/v1445497198/CONTAINED/SP-web-BH.png">
+                <script type="application/json" class="w-json">
+                  { "items": [{
+                    "url": "http://res.cloudinary.com/titanicmedia/image/upload/v1445497198/CONTAINED/SP-web-BH.png",
+                    "fileName": "56160a5c794d876a2b4e95c1_11999663_985215621529690_4927600099982776853_o.jpg",
+                    "origFileName": "11999663_985215621529690_4927600099982776853_o.jpg",
+                    "width": 1280,
+                    "height": 853,
+                    "size": 93878,
+                    "type": "image"
+                  }] }
+                </script>
+              </a>
+              <a class="w-lightbox w-inline-block what-is-lightbox bottom-row" href="#"><img class="about-bottom-lightbox-placeholder" src="http://res.cloudinary.com/titanicmedia/image/upload/c_scale,w_300/v1445501754/CONTAINED/T13_Academy_Logo-3-icon.png">
+                <script type="application/json" class="w-json">
+                  { "items": [{
+                    "url": "http://res.cloudinary.com/titanicmedia/image/upload/c_scale,w_300/v1445501754/CONTAINED/T13_Academy_Logo-3-icon.png",
+                    "fileName": "56160a8600652b7b544233a5_12017666_987858667932052_7609469471716567535_o.jpg",
+                    "origFileName": "12017666_987858667932052_7609469471716567535_o.jpg",
+                    "width": 2048,
+                    "height": 1365,
+                    "size": 837037,
+                    "type": "image"
+                  }] }
+                </script>
+              </a>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="w-section arrow-down-section">
+    <h1 class="how-to-heading" data-ix="appear-on-scroll-who-is-it">HOW to get in touch?<br>HOW to get involved?</h1>
+    <div class="arrow-block" data-ix="appear-on-scroll-how-to">☟</div>
+  </div>

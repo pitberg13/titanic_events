@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!-- This site was created in Webflow. http://www.webflow.com-->
+<!-- Last Published: Thu Oct 01 2015 04:30:43 GMT+0000 (UTC) -->
+<html data-wf-site="56022e6715c5ddff35a705bf" data-wf-page="56022e6715c5ddff35a705c1">
+<head>
+  <meta charset="utf-8">
+  <title>Contained | <%= @page_title || "Admin" %></title>
+  <meta name="description" content="Titanic CMS powering your website.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="Webflow">
+
+  <%= javascript_include_tag 'application' %>
+  <%= stylesheet_link_tag 'admin', 'https://fonts.googleapis.com/css?family=Oswald' %>
+  <%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Oswald:400" %>
+  <%= stylesheet_link_tag('webflow') %>
+
+  <script>
+    WebFont.load({
+      google: {
+        families: ["Oswald:300,400,700","Droid Sans:400,700"]
+      }
+    });
+  </script>
+  <%= javascript_include_tag "modernizr" %>
+  <%= favicon_link_tag %>
+  <%= favicon_link_tag 'favicon.ico', rel: 'shortcut-icon', type: 'image/xcon' %>
+  <%= favicon_link_tag 'con-webclip.png', rel: 'apple-touch-icon' %>
+</head>
+<body>
+  <div class="w-nav left-navigation" data-collapse="medium" data-animation="over-left" data-duration="500" data-doc-height="1" data-no-scroll="1">
+    <div><%= image_tag('TM-CMS-MONO.svg', :class => "w-hidden-medium w-hidden-small w-hidden-tiny logo-image") %>
+    </div>
+    <nav class="w-nav-menu nav-menu" role="navigation"><%= link_to "INFO", {controller: "access", action: "index"}, class: "w-nav-link nav-link" %><%= link_to "EVENTS", {controller: "events", action: "index"}, class: "w-nav-link nav-link" %><%= link_to "NEWS", {controller: "posts", action: "index"}, class: "w-nav-link nav-link" %><%= link_to "VENUES", {controller: "venues", action: "index"}, class: "w-nav-link nav-link" %><%= link_to "CATEGORIES", {controller: "categories", action: "index"}, class: "w-nav-link nav-link" %><%= link_to "USERS", {controller: "admin_users", action: "index"}, class: "w-nav-link nav-link" %><%= link_to "LOGOUT", {controller: "access", action: "logout"}, class: "w-nav-link nav-link" %><div class="identity">Logged in as: <%= session[:username] %></div>
+    </nav>
+    <div class="w-nav-button hamburger-button">
+      <div class="w-icon-nav-menu"></div>
+    </div>
+  </div>
+</br>
+        <%= yield %>
+
+  <footer class="w-section footer center">
+    <div class="w-container">
+      <div class="footer-text">© 2015 Titanic Media.&nbsp;&nbsp;
+        <br>Built by&nbsp;<a target="_blank" class="text-link" style="display: inline !important; background-color: white;" href="http://titanicmedia.tv">Titanic Media</a>
+      </div>
+    </div>
+  </footer>
+  <%= javascript_include_tag "https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" %>
+  <%= javascript_include_tag "webflow" %>
+  <!--[if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
+</body>
+</html>

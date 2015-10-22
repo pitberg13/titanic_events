@@ -1,0 +1,40 @@
+<% @page_title = @event.title %>
+
+<div class="w-container post-container"><%= image_tag @event.image_url.to_s, :class => "featured-image" %>
+    <h1 class="post-title"><%= @event.title %></h1>
+    <%= link_to({:action => 'programme'}, :class => "w-hidden-tiny w-inline-block more-news-button") do %>
+      <div class="more-event-button-text overlay">MORE&nbsp;EVENTS&nbsp;&gt;</div>
+    <% end %>
+    <div class="w-row event-info-row">
+      <div class="w-col w-col-6 w-clearfix event-info-column">
+        <h1 class="event-datetime-heading"><%= @event.event_datetime.strftime("%H.%M%p") %></h1>
+        <h1 class="event-datetime-heading"><%= @event.event_datetime.strftime("%A %d %B") %></h1>
+        <h1 class="event-venue-heading"><%= @event.venue.venue_name %></h1>
+      </div>
+      <div class="w-col w-col-6 ticket-info">
+        <div class="w-embed ticket-code"></div>
+      </div>
+    </div>
+    <div class="w-row content-body-row event">
+      <div class="w-col w-col-9 content-body-column event">
+        <div class="post-content-div">
+          <div class="news-post-content"><%= raw(@event.content) %></div>
+        </div>
+      </div>
+      <div class="w-col w-col-3 w-hidden-small w-hidden-tiny ad-block-right-column">
+      </div>
+    </div>
+    <div class="w-row post-strip">
+      <% @post.published.sorted.limit(4).each do |p| %>
+      <div class="w-col w-col-3">
+        <%= link_to({:action => 'post', :permalink => p.permalink}, :class => "w-inline-block _4strip-link-block") do %>
+          <div class="strip-image-div"><%= image_tag p.image_url.to_s, :class => "_4strip-imagee" %>
+          </div>
+          <div class="_4strip-heading-div">
+            <h1 class="strip-heading"><%= p.title %></h1>
+          </div>
+      </div>
+      <% end %>
+      <% end %>
+    </div>
+  </div>

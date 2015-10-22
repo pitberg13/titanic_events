@@ -1,0 +1,25 @@
+{
+  "name": "davo",
+  "version": "0.0.0",
+  "authors": [
+    "pitberg13 <david@davidsherman.tv>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "keywords": [
+    "events",
+    "cms"
+  ],
+  "license": "MIT",
+  "homepage": "http://titanicmedia.tv/",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor/assets/bower_components",
+    "test",
+    "tests"
+  ]
+}

@@ -1,0 +1,31 @@
+<% if !flash[:notice].blank? %>
+<div class="w-container index-title-continer">
+  <div class="w-row">
+    <div class="w-col w-col-3">
+    </div>
+    <div class="w-col w-col-4 notice">
+      <%= flash[:notice] %>
+    </div>
+    <div class="w-col w-col-5">
+    </div>
+    <% end %>
+  </div>
+</div>
+
+<% @page_title = "Admin Menu" %>
+
+<div class="w-section cms-section">
+  <div class="w-container cms-container">
+    <div class="form-block">
+      <h3 class="text-heading" style="text-align:centre">ABOUT THIS CMS</h3>
+          <div><p>The Content Management System you are using is still a work in progress.  It's the first step in having something we can use as a resource with clients.</p>
+            <p>If you come up against any bugs/issus/concerns, or what the f**k moments then email me ASAP: <a href="mailto:david@titanicmedia.tv">david@titanicmedia.tv</a></p>
+            <p>The image loading for news and events featured images isn't showing previews because I haven't had time to set up the code with the rush to get live.  This is coming so bare with me.  For now the best way to check an image is save the post then use the "SHOW" button from the post list.  Images should be 1200x800px always.</p>
+            <p>The whole site is designed to be light and fast to load, that means keeping images within the limits above and file size below 500kb at all times so as not to cause a bottleneck.</p>
+            <p>To add images to the post body just click the little image symbol in the editor.  Don't touch any other settings there, just hit upload.  This will send the image to a cloud file system that will ensure images are delivered back in the correct format and at high speed.</p>
+            <p>Any questions just email or DM me in Slack.</p>
+
+          </div>
+    </div>
+  </div>
+</div>

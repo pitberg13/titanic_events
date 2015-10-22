@@ -1,0 +1,15 @@
+<% if object && object.errors.size > 0 %>
+  <div class="w-row form-row">
+    <div class="w-col w-col-4 form-errors">
+      <h2><%= pluralize(object.errors.size, "error") %> on here somewhere...</h2>
+    </div>
+    <div class="w-col w-col-8 errors">
+      <p>There were problems with the following fields:</p>
+      <ul>
+        <% object.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+        <% end %>
+      </ul>
+  </div>
+</div>
+<% end %>

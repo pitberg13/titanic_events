@@ -1,0 +1,56 @@
+<% @page_title = "Admin Login" %>
+<!DOCTYPE html>
+<!-- This site was created in Webflow. http://www.webflow.com-->
+<!-- Last Published: Thu Oct 01 2015 04:30:43 GMT+0000 (UTC) -->
+<html data-wf-site="56022e6715c5ddff35a705bf" data-wf-page="56022e6715c5ddff35a705c1">
+<head>
+  <meta charset="utf-8">
+  <title>Contained | <%= @page_title || "Admin" %></title>
+  <meta name="description" content="Titanic CMS powering your website.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="Webflow">
+  <%= javascript_include_tag "jquery.ui.widget", "jquery.iframe-transport",
+                         "jquery.fileupload", "jquery.cloudinary" %>
+  <%= javascript_include_tag "https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js" %>
+  <%= cloudinary_js_config %>
+  <%= stylesheet_link_tag 'admin', 'https://fonts.googleapis.com/css?family=Oswald' %>
+  <%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Oswald:400" %>
+  <%= stylesheet_link_tag('webflow') %>
+
+
+  <script type="text/javascript">
+$(function()
+{
+$('.attachinary-input').attachinary()
+});
+</script>
+  <script>
+    WebFont.load({
+      google: {
+        families: ["Oswald:300,400,700","Droid Sans:400,700"]
+      }
+    });
+  </script>
+  <%= javascript_include_tag "modernizr" %>
+  <%= favicon_link_tag %>
+  <%= favicon_link_tag 'favicon.ico', rel: 'shortcut-icon', type: 'image/xcon' %>
+  <%= favicon_link_tag 'SPV2-webclip.png', rel: 'apple-touch-icon' %>
+</head>
+<body>
+  <div class="w-container login-form">
+    <div class="logon-div">
+      <%= form_tag(:action => 'attempt_login') do %>
+      <h3 class="login-heading">USERNAME  <%= text_field_tag(:username) %></h3>
+      <h3>PASSWORD  <%= password_field_tag(:password) %></h3>
+      <div style="margin-left:200px"><%= submit_tag("Log In", :class => 'action-button') %></div>
+    </br>
+      <div class="login-text">For all issues contact <a class="text-link" href="mailto:support@titanicmedia.tv?subject=Titanic%20CMS%20login%20query">support@titanicmedia.tv</a>
+      </div>
+    </div>
+    <% end %>
+  </div>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/webflow.js"></script>
+  <!--[if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
+</body>
+</html>
