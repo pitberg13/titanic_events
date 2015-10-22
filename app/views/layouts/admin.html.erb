@@ -22,13 +22,12 @@
     });
   </script>
   <%= javascript_include_tag "modernizr" %>
-  <%= favicon_link_tag %>
-  <%= favicon_link_tag 'favicon.ico', rel: 'shortcut-icon', type: 'image/xcon' %>
-  <%= favicon_link_tag 'con-webclip.png', rel: 'apple-touch-icon' %>
+  <%= favicon_link_tag 'http://res.cloudinary.com/titanicmedia/image/upload/v1445513735/CONTAINED/favicon.ico', rel: 'shortcut-icon', type: 'image/xcon' %>
+  <%= favicon_link_tag 'http://res.cloudinary.com/titanicmedia/image/upload/v1445502908/CONTAINED/con-webclip.jpg', rel: 'apple-touch-icon' %>
 </head>
 <body>
   <div class="w-nav left-navigation" data-collapse="medium" data-animation="over-left" data-duration="500" data-doc-height="1" data-no-scroll="1">
-    <div><%= image_tag('TM-CMS-MONO.svg', :class => "w-hidden-medium w-hidden-small w-hidden-tiny logo-image") %>
+    <div><%= image_tag('http://res.cloudinary.com/titanicmedia/image/upload/v1445513736/CONTAINED/TM-CMS-MONO.svg', :class => "w-hidden-medium w-hidden-small w-hidden-tiny logo-image") %>
     </div>
     <nav class="w-nav-menu nav-menu" role="navigation"><%= link_to "INFO", {controller: "access", action: "index"}, class: "w-nav-link nav-link" %><%= link_to "EVENTS", {controller: "events", action: "index"}, class: "w-nav-link nav-link" %><%= link_to "NEWS", {controller: "posts", action: "index"}, class: "w-nav-link nav-link" %><%= link_to "VENUES", {controller: "venues", action: "index"}, class: "w-nav-link nav-link" %><%= link_to "CATEGORIES", {controller: "categories", action: "index"}, class: "w-nav-link nav-link" %><%= link_to "USERS", {controller: "admin_users", action: "index"}, class: "w-nav-link nav-link" %><%= link_to "LOGOUT", {controller: "access", action: "logout"}, class: "w-nav-link nav-link" %><div class="identity">Logged in as: <%= session[:username] %></div>
     </nav>
