@@ -1,8 +1,6 @@
 /* Admin stylesheet       */
 /* load after public.css */
 
-*= require_tree .
-*= require bootstrap/dist/css/bootstrap
 
 /* From Webflow*/
 body {
