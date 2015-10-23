@@ -4,7 +4,6 @@
   <div class="w-container">
     <div class="w-row home-row-1">
       <div class="w-col w-col-8 w-col-stack feature-column-1">
-        <div>
         <% @event.featured.sorted.limit(1).each do |e| %>
         <%= link_to({:action => 'event', :permalink => e.permalink}, :class => "w-inline-block main-feature-link-block") do %>
           <div class="main-feature-image-div">
@@ -17,9 +16,7 @@
         <% end %>
         <% end %>
       </div>
-      </div>
       <div class="w-col w-col-4 w-col-stack w-clearfix feature-column-2">
-        <div>
         <% @post.featured.published.sorted.limit(2).each do |p| %>
         <%= link_to({:action => 'post', :permalink => p.permalink}, :class => "w-inline-block side-feature-link-block") do %>
           <div class="side-feature-image-div">
@@ -33,7 +30,6 @@
           <%= link_to({:action => 'programme'}, :class => "w-inline-block home-more-new-button") do %>
             <div class="more-event-button-text">MORE&nbsp;EVENTS&nbsp;&gt;</div>
           <% end %>
-        </div>
       </div>
     </div>
   </div>
