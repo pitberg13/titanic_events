@@ -3,8 +3,7 @@
 <div class="w-section featured-container">
   <div class="w-container">
     <div class="w-row home-row-1">
-      <div class="w-col w-col-8 w-col-stack feature-column-1">
-        <div>
+      <div class="w-col w-col-12 w-col-stack feature-column-1">
         <% @event.featured.sorted.limit(1).each do |e| %>
         <%= link_to({:action => 'event', :permalink => e.permalink}, :class => "w-inline-block main-feature-link-block") do %>
           <div class="main-feature-image-div">
@@ -17,28 +16,9 @@
         <% end %>
         <% end %>
       </div>
-      </div>
-      <div class="w-col w-col-4 w-col-stack w-clearfix feature-column-2">
-        <div>
-        <% @post.featured.published.sorted.limit(2).each do |p| %>
-        <%= link_to({:action => 'post', :permalink => p.permalink}, :class => "w-inline-block side-feature-link-block") do %>
-          <div class="side-feature-image-div">
-            <%= image_tag p.image_url.to_s, :class => "side-feature-image" %>
-          </div>
-          <div class="side-feature-heading-div">
-            <h1 class="side-feature-heading-overlay"><%= p.title %></h1>
-          </div>
-        <% end %>
-        <% end %>
-          <%= link_to({:action => 'programme'}, :class => "w-inline-block home-more-new-button") do %>
-            <div class="more-event-button-text">MORE&nbsp;EVENTS&nbsp;&gt;</div>
-          <% end %>
-        </div>
-      </div>
     </div>
   </div>
 </div>
-
 <div class="w-section intro-copy-section">
   <div class="w-container intr-section-container">
     <div class="tagline-div">
@@ -69,6 +49,33 @@
           </div>
           <div class="_4strip-heading-div">
             <h1 class="strip-heading"><%= e.title %></h1>
+          </div>
+      </div>
+      <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
+<div class="w-section next-events-section">
+  <div class="w-container home-next-events">
+    <div class="w-row heading-row home">
+      <div class="w-col w-col-8 heading-row-left">
+        <h1 class="headin-row-text">News from Contained</h1>
+      </div>
+      <div class="w-col w-col-4 w-hidden-small w-hidden-tiny w-clearfix heading-row-right">
+        <%= link_to({:action => 'news'}, :class => "w-inline-block home-more-new-button") do %>
+          <div class="more-event-button-text">MORE&nbsp;NEWS&nbsp;&gt;</div>
+        <% end %>
+      </div>
+    </div>
+    <div class="w-row post-strip">
+      <% @post.published.sorted.limit(4).each do |p| %>
+      <div class="w-col w-col-3">
+        <%= link_to({:action => 'news', :permalink => p.permalink}, :class => "w-inline-block _4strip-link-block") do %>
+          <div class="strip-image-div"><%= image_tag p.image_url.to_s, :class => "_4strip-imagee" %>
+          </div>
+          <div class="_4strip-heading-div">
+            <h1 class="strip-heading"><%= p.title %></h1>
           </div>
       </div>
       <% end %>
