@@ -1,14 +1,9 @@
 class Post < ActiveRecord::Base
 
+    mount_uploader :image, ImageUploader
+
     has_many :post_edits
     has_many :editors, :through => :event_edits, :class_name => "AdminUser"
-
-    has_many :post_photos
-    has_many :photos, :through => :post_photos
-    accepts_nested_attributes_for :photos, :allow_destroy => true
-    #accepts_nested_attributes_for :photos
-
-    mount_uploader :image, ImageUploader
 
     acts_as_list
 

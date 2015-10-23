@@ -4,7 +4,6 @@ class PostsController < ApplicationController
 
     layout 'admin'
 
-
     def index
       @posts = Post.sorted
     end
