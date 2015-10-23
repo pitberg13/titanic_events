@@ -30,7 +30,7 @@ class Event < ActiveRecord::Base
     scope :sorted, lambda { order('events.event_datetime ASC') }
     scope :featured, lambda { where(:featured => true) }
     scope :classes, lambda { where(:category_id => 1) }
-    scope :bigevents, lambda { where(:category_id => 2) }
+    scope :bigevents, lambda { where(:category_id => 12) }
     scope :streetworkout, lambda { where('title LIKE ?', "%workout%")}
     scope :parkour, lambda { where('title LIKE ?', "%parkour%")}
     scope :yoga, lambda { where('title LIKE ?', "%yoga%")}
