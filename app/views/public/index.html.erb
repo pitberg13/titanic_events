@@ -74,22 +74,27 @@
 <div class="w-section intro-text-section">
   <div class="w-container intr-section-container solid">
     <div class="seed-text-div">
-      <h1 class="home-intro-header centre head">Seed of the city</h1>
+      <h1 class="home-intro-header-large centre head">Seed of the city</h1>
       <div class="home-intro-copy centre">Contained will see two venues play host to an incredibly diverse programme of gatherings, events and experiences.</div>
     </div>
-    <div class="home-venue-images-div"><img class="home-intro-image" src="http://res.cloudinary.com/titanicmedia/image/upload/v1445503562/CONTAINED/CON-homepage-village.jpg"><img class="home-intro-image" src="http://res.cloudinary.com/titanicmedia/image/upload/c_scale,w_500/v1445410400/CONTAINED/Contained2.jpg">
+    <div class="home-venue-images-div"><img class="home-intro-image" src="http://res.cloudinary.com/titanicmedia/image/upload/v1445410401/CONTAINED/contained3a.jpg"><img class="home-intro-image" src="http://res.cloudinary.com/titanicmedia/image/upload/c_scale,w_500/v1445410400/CONTAINED/Contained2.jpg">
     </div>
     <div class="w-row">
       <div class="w-col w-col-6 w-clearfix home-intro-partners-column">
         <h1 class="home-intro-header">Contained Pop-up Village</h1>
-        <%= link_to({:action => 'containedvillage'}, :class => "w-inline-block home-more-new-button containedvillagemore") do %>
-          <div class="more-event-button-text">EVENTS AT CONTAINED VILLAGE ></div>
-        <% end %>
+        <div class="home-intro-copy">A pioneering, eco village bringing the City to the water’s edge. Constructed using salvaged shipping containers and rebuilt materials, the Contained PopUp Village will have a green DNA. This fresh urban arena is a distinctive creation that will bring a bohemian vibe to the city.</div>
+        </br>
       </div>
       <div class="w-col w-col-6 w-clearfix home-intro-copy-column">
         <h1 class="home-intro-header">Contained13</h1>
-        <%= link_to({:action => 'contained13'}, :class => "w-inline-block home-more-new-button containedvillagemore") do %>
-          <div class="more-event-button-text">EVENTS AT CONTAINED13 ></div>
+        <div class="home-intro-copy">The cultural heartbeat of Belfast’s Titanic Quarter. T13 has emerged as one of Ireland's most dynamic event spaces. Sport & lifestyle, culture & events, movies & film are key ingredients in the unique blend that makes T13 an immersive, unforgettable experience.</div>
+        </br>
+      </div>
+    </div>
+    <div class="seed-text-div">
+      <div class="home-intro-copy centre">
+        <%= link_to({:action => 'about'}, :class => "w-inline-block home-more-new-button containedvillagemore") do %>
+          <div class="get-involved-button-text">FIND OUT MORE ></div>
         <% end %>
       </div>
     </div>

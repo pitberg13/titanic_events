@@ -1,13 +1,13 @@
-<% @page_title = "Full Programme" %>
+<% @page_title = "Events" %>
 
 <div class="w-container filter-container">
     <div class="w-row listing-page-heading-row">
       <div class="w-col w-col-8">
-        <h1 class="listing-heading">Full programme</h1>
+        <h1 class="listing-heading">Events</h1>
       </div>
       <div class="w-col w-col-4">
-        <%= link_to({action: "upcomingevents"}, class: "w-inline-block category-button") do %>
-          <div class="category-button-text">SEE EVENTS ></div>
+        <%= link_to({action: "programme"}, class: "w-inline-block category-button") do %>
+          <div class="category-button-text">FULL PROGRAMME ></div>
         <% end %>
         <%= link_to({action: "classes"}, class: "w-inline-block category-button") do %>
           <div class="category-button-text">SEE CLASSES ></div>
@@ -18,7 +18,7 @@
   <div class="w-section listing-section">
     <div class="w-container">
       <div class="w-row listing-strip-3across">
-        <% @event.upcoming.live.sorted.each do |e| %>
+        <% @event.upcoming.live.sorted.bigevents.each do |e| %>
         <div class="w-col w-col-4 upcomingeventcolumn">
           <%= link_to({:action => 'event', :permalink => e.permalink}, :class => "w-inline-block side-feature-link-block") do %>
             <div class="side-feature-image-div">

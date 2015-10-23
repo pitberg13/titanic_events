@@ -29,14 +29,12 @@ class Event < ActiveRecord::Base
     scope :live, lambda { where(:visible => true) }
     scope :sorted, lambda { order('events.event_datetime ASC') }
     scope :featured, lambda { where(:featured => true) }
-    scope :artsculture, lambda { where(:category_id => 2) }
-    scope :festivalsfamily, lambda { where(:category_id => 3) }
-    scope :fitnesswellbeing, lambda { where(:category_id => 4) }
-    scope :fooddrink, lambda { where(:category_id => 5) }
-    scope :moviestheatre, lambda { where(:category_id => 6) }
-    scope :musicdance, lambda { where(:category_id => 1) }
-    scope :containedvillage, lambda { where(:venue_id => 2) }
-    scope :contained13, lambda { where(:venue_id => 1) }
+    scope :classes, lambda { where(:category_id => 1) }
+    scope :bigevents, lambda { where(:category_id => 2) }
+    scope :streetworkout, lambda { where('title LIKE ?', "%workout%")}
+    scope :parkour, lambda { where('title LIKE ?', "%parkour%")}
+    scope :yoga, lambda { where('title LIKE ?', "%yoga%")}
+    scope :soundhealing, lambda { where('title LIKE ?', "%sound healing%")}
 
     private
 

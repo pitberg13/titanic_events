@@ -1,10 +1,10 @@
 <% if !flash[:notice].blank? %>
 <div class="w-container index-title-continer">
   <div class="w-row">
+    <div class="w-col w-col-4">
+    </div>
     <div class="w-col w-col-4 notice">
       <%= flash[:notice] %>
-    </div>
-    <div class="w-col w-col-4">
     </div>
     <div class="w-col w-col-4">
     </div>
@@ -66,7 +66,7 @@
         <div class="w-col w-col-4">
           <div class="w-form">
             <form id="email-form" name="email-form" data-name="Email Form">
-              <%= link_to("Show", {:controller => 'public', :action => 'event', :id => event.id}, :class => 'action-button', target: "_blank") %>
+              <%= link_to("Show", {:controller => 'public', :action => 'event', :permalink => event.permalink}, :class => 'action-button', target: "_blank") %>
               <%= link_to("Edit", {:action => 'edit', :id => event.id}, :class => 'action-button') %>
               <%= link_to("Delete", {:action => 'delete', :id => event.id}, :class => 'action-button') %>
             </form>

@@ -8,14 +8,8 @@ Rails.application.routes.draw do
   get '/event/:permalink' => 'public#event'
   get '/post/:permalink' => 'public#post'
   get '/programme' => 'public#programme'
-  get '/contained13' => 'public#contained13'
-  get '/containedvillage' => 'public#containedvillage'
-  get '/artsculture' => 'public#artsculture'
-  get '/festivalsfamily' => 'public#festivalsfamily'
-  get '/fitnesswellbeing' => 'public#fitnesswellbeing'
-  get '/fooddrink' => 'public#fooddrink'
-  get '/moviestheatre' => 'public#moviestheatre'
-  get '/musicdance' => 'public#musicdance'
+  get '/upcomingevents' => 'public#upcomingevents'
+  get '/classes' => 'public#classes'
 
   match ':controller(/:action(/:id))', :via => [:get, :post]
   #match ':controller(/:action)', via: [:get, :post]

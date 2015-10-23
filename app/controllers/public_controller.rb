@@ -7,10 +7,15 @@ class PublicController < ApplicationController
       @post = Post.published
     end
 
+    def about
+      @event = Event.upcoming.live
+      @post = Post.published
+    end
+
     def event
       @event = Event.upcoming.live.where(:permalink => params[:permalink]).first
       if @event.nil?
-        redirect_to(:action => 'index')
+        redirect_to(:action => 'prigramme')
       else
       end
       @venues = Venue.all
@@ -20,7 +25,7 @@ class PublicController < ApplicationController
     def post
       @post = Post.published.where(:permalink => params[:permalink]).first
       if @post.nil?
-        redirect_to(:action => 'index')
+        redirect_to(:action => 'news')
       else
       end
       @event = Event.upcoming.live
@@ -33,54 +38,25 @@ class PublicController < ApplicationController
     def programme
       @event = Event.upcoming.live
       if @event.nil?
-        redirect_to(:action => 'index')
+        redirect_to(:action => 'news')
       else
       end
     end
 
-    def about
-      @event = Event.upcoming.live
-      @post = Post.published
+    def upcomingevents
+      @event = Event.all
+      if @event.nil?
+        redirect_to(:action => 'programme')
+      else
+      end
     end
 
-    def artsculture
+    def classes
       @event = Event.upcoming.live
-      @post = Post.published
-    end
-
-    def festivalsfamily
-      @event = Event.upcoming.live
-      @post = Post.published
-    end
-
-    def fitnesswellbeing
-      @event = Event.upcoming.live
-      @post = Post.published
-    end
-
-    def fooddrink
-      @event = Event.upcoming.live
-      @post = Post.published
-    end
-
-    def moviestheatre
-      @event = Event.upcoming.live
-      @post = Post.published
-    end
-
-    def musicdance
-      @event = Event.upcoming.live
-      @post = Post.published
-    end
-
-    def containedvillage
-      @event = Event.upcoming.live
-      @post = Post.published
-    end
-
-    def contained13
-      @event = Event.upcoming.live
-      @post = Post.published
+      if @event.nil?
+        redirect_to(:action => 'programme')
+      else
+      end
     end
 
     def use_for_redirect

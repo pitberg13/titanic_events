@@ -44,10 +44,10 @@ Seed of the city: Contained will see two venues play host to an incredibly diver
       <nav class="w-nav-menu mobile-menu" role="navigation"><%= link_to "HOME", {action: "index"}, class: "w-nav-link menu-item" %>
         <div class="w-dropdown menu-item" data-delay="0">
           <div class="w-dropdown-toggle menu-dropdown-toggle">
-            <div class="menu-dropdown-text">PROGRAMME</div>
+            <div class="menu-dropdown-text">WHATS ON</div>
             <div class="w-icon-dropdown-toggle dropdown-icon"></div>
           </div>
-          <nav class="w-dropdown-list menu-dropdown-list"><%= link_to "FULL PROGRAMME", {action: "programme"}, class: "w-dropdown-link menu-dropdown-link" %><%= link_to "@CONTAINED13", {action: "contained13"}, class: "w-dropdown-link menu-dropdown-link" %><%= link_to "@CONTAINED VILLAGE", {action: "containedvillage"}, class: "w-dropdown-link menu-dropdown-link" %><%= link_to "ARTS & CULTURE", {action: "artsculture"}, class: "w-dropdown-link menu-dropdown-link" %><%= link_to "FESTIVALS & FAMILY", {action: "festivalsfamily"}, class: "w-dropdown-link menu-dropdown-link" %><%= link_to "FITNESS & WELLBEING", {action: "fitnesswellbeing"}, class: "w-dropdown-link menu-dropdown-link" %><%= link_to "FOOD & DRINK", {action: "fooddrink"}, class: "w-dropdown-link menu-dropdown-link" %><%= link_to "MOVIES & THEATRE", {action: "moviestheatre"}, class: "w-dropdown-link menu-dropdown-link" %><%= link_to "MUSIC & DANCE", {action: "musicdance"}, class: "w-dropdown-link menu-dropdown-link" %>
+          <nav class="w-dropdown-list menu-dropdown-list"><%= link_to "FULL PROGRAMME", {action: "programme"}, class: "w-dropdown-link menu-dropdown-link" %><%= link_to "EVENTS", {action: "upcomingevents"}, class: "w-dropdown-link menu-dropdown-link" %><%= link_to "CLASSES", {action: "classes"}, class: "w-dropdown-link menu-dropdown-link" %>
           </nav>
         </div><%= link_to "NEWS", {action: "news"}, class: "w-nav-link menu-item" %><%= link_to "ABOUT", {action: "about"}, class: "w-nav-link menu-item" %><a class="w-nav-link menu-item" href="#contact">CONTACT</a>
       </nav>
@@ -60,15 +60,15 @@ Seed of the city: Contained will see two venues play host to an incredibly diver
     <div class="w-container">
       <div class="w-row home-social-row">
         <div class="w-col w-col-7 w-col-medium-6 w-col-small-7 home-hashtag-column">
-          <div class="hastag-div"><%= image_tag("http://res.cloudinary.com/titanicmedia/image/upload/v1445513736/CONTAINED/contained-holding-page-hashtag-black.svg") %>
+          <div class="hastag-div"><%= image_tag("http://res.cloudinary.com/titanicmedia/image/upload/v1445565045/CONTAINED/contained-holding-page-tagline-black.svg") %>
           </div>
         </div>
         <div class="w-col w-col-5 w-col-medium-6 w-col-small-5 home-social-column">
-          <a class="w-inline-block home-social-div" href="http://instagram.com/contained13/" target="_blank"><%= image_tag("http://res.cloudinary.com/titanicmedia/image/upload/v1445513735/CONTAINED/con-social-in-rev-01.svg") %>
+          <a class="w-inline-block home-social-div" href="http://instagram.com/contained13/" target="_blank"><%= image_tag("http://res.cloudinary.com/titanicmedia/image/upload/v1445513735/CONTAINED/con-social-in-rev-01.svg", class: "home-social-image") %>
           </a>
-          <a class="w-inline-block home-social-div" href="https://www.facebook.com/belfast.contained" target="_blank"><%= image_tag("http://res.cloudinary.com/titanicmedia/image/upload/v1445513735/CONTAINED/con-social-fb-rev-01.svg") %>
+          <a class="w-inline-block home-social-div" href="https://www.facebook.com/belfast.contained" target="_blank"><%= image_tag("http://res.cloudinary.com/titanicmedia/image/upload/v1445513735/CONTAINED/con-social-fb-rev-01.svg", class: "home-social-image") %>
           </a>
-          <a class="w-inline-block home-social-div" href="http://twitter.com/contained13/" target="_blank"><%= image_tag("http://res.cloudinary.com/titanicmedia/image/upload/v1445513735/CONTAINED/con-social-tw-rev-01.svg") %>
+          <a class="w-inline-block home-social-div" href="http://twitter.com/contained13/" target="_blank"><%= image_tag("http://res.cloudinary.com/titanicmedia/image/upload/v1445513735/CONTAINED/con-social-tw-rev-01.svg", class: "home-social-image") %>
           </a>
         </div>
       </div>
@@ -83,7 +83,7 @@ Seed of the city: Contained will see two venues play host to an incredibly diver
           <div id="mc_embed_signup">
             <form class="footer-contact-form" action="//t13.us7.list-manage.com/subscribe/post?u=f31fdca1460ca4d6ae6ed563d&amp;id=60182d1278" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
               <div id="mc_embed_signup_scroll">
-                 <h2 class="mailchimp-form-heading">Subscribe to our mailing list</h2>
+                 <h2 class="mailchimp-form-heading">Newsletter</h2>
                  <div class="indicates-required" style="text-align: right;"><span class="asterisk">*</span> indicates required</div>
                  <div class="mc-field-group">
                     <label class="contact-form-text" for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
@@ -114,8 +114,10 @@ Seed of the city: Contained will see two venues play host to an incredibly diver
           <h1 class="contact-form-heading">Contact us</h1>
           <div class="footer-contact-info">If there is anything we can help with please get in touch via the details below or the contact form.
             <br>
-            <br>t. <a class="footer-text-link" href="tel:+442890023111">+44 (0) 2890 023 111</a>
-            <br>e. <a class="footer-text-link" href="mailto:info@belfastcontained.com?subject=Website%20mail">info@belfastcontained.com</a>
+            <br>general. <a class="footer-text-link" href="mailto:info@belfastcontained.com?subject=Website%20mail">info@belfastcontained.com</a>
+            <br>media. <a class="footer-text-link" href="mailto:media@belfastcontained.com?subject=Website%20mail">media@belfastcontained.com</a>
+            <br>bookings. <a class="footer-text-link" href="mailto:book@belfastcontained.com?subject=Website%20mail">book@belfastcontained.com</a>
+            <br>telephone. <a class="footer-text-link" href="tel:+442890023111">+44 (0) 2890 023 111</a>
           </div>
           <a class="w-hidden-small w-hidden-tiny w-inline-block footer-social-link" href="http://instagram.com/contained13/" target="_blank"><%= image_tag("http://res.cloudinary.com/titanicmedia/image/upload/v1445513735/CONTAINED/con-social-in-rev-01.svg", id: "footer") %>
           </a>

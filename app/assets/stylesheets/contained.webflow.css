@@ -237,7 +237,7 @@
 .category-button {
   width: auto;
   height: 86%;
-  margin-top: 10px;
+  margin-top: 30px;
   margin-right: 10px;
   padding: 15px 15px;
   float: none;
@@ -358,7 +358,7 @@
 .venue-page-lightbox-link {
   width: 30%;
   margin-top: 15px;
-  margin-right: 10px;
+  margin-right: 5px;
   margin-left: 5px;
 }
 .post-title {
@@ -521,7 +521,7 @@
 }
 .what-is-copy-block {
   display: inline-block;
-  width: 65%;
+  width: 100%;
   padding: 10px 10px 20px;
   font-family: Roboto, sans-serif;
   color: white;
@@ -554,7 +554,7 @@
   float: right;
 }
 .what-is-lightbox.bottom-row {
-  width: 29%;
+  width: 45%;
   margin-right: 3px;
   margin-left: 5px;
   float: none;
@@ -826,7 +826,7 @@
 .home-intro-header {
   font-family: Muli, sans-serif;
   color: white;
-  font-size: 30px;
+  font-size: 2em;
 }
 .home-intro-header.centre {
   text-align: center;
@@ -893,8 +893,8 @@
   background-color: #222;
 }
 .about-bottom-lightbox-placeholder {
-  width: 83px;
-  height: 58px;
+  width: 100%$;
+  height: auto;
 }
 .footerlinkblock {
   margin: 10px;
