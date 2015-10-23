@@ -7,14 +7,9 @@
     <% end %>
     <div class="w-row event-info-row">
       <div class="w-col w-col-6 w-clearfix event-info-column">
-
-        <h1 class="event-datetime-heading"><%= @event.event_datetime.strftime("%H.%M %A %d %B") %></h1>
-        <% @event.venues.each do |v| %>
-        <h1 class="event-venue-heading"><%= event.venue_name %></h1>
-        <% end %>
-        <% @event.categories.each do |c| %>
-        <h1 class="w-hidden-small w-hidden-tiny event-category-heading"><%= event.category_title %></h1>
-        <% end %>
+        <h1 class="event-datetime-heading"><%= @event.event_datetime.strftime("%H.%M%p") %></h1>
+        <h1 class="event-datetime-heading"><%= @event.event_datetime.strftime("%A %d %B") %></h1>
+        <h1 class="event-venue-heading"><%= @event.venue.venue_name %></h1>
       </div>
       <div class="w-col w-col-6 ticket-info">
         <div class="w-embed ticket-code"></div>
@@ -29,5 +24,4 @@
       <div class="w-col w-col-3 w-hidden-small w-hidden-tiny ad-block-right-column">
       </div>
     </div>
-
   </div>

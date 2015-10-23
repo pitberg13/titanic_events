@@ -33,7 +33,6 @@ class PostsController < ApplicationController
     def edit
       @post = Post.find_by_id(params[:id])
       @post_count = Post.count
-      6.times {@post.post_photos.build}
     end
 
     def update

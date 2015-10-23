@@ -49,7 +49,7 @@
           <h4>#</h4>
         </div>
         <div class="w-col w-col-2">
-          <h4>Updated at</h4>
+          <h4>Event time</h4>
         </div>
         <div class="w-col w-col-4">
           <h4>Actions</h4>
@@ -62,11 +62,11 @@
         <div class="w-col w-col-1"><%= event.visible ? 'Live' : 'Draft' %></div>
         <div class="w-col w-col-2"><%= event.featured ? 'Feature' : 'Not-featured' %></div>
         <div class="w-col w-col-1"><%= event.position %></div>
-        <div class="w-col w-col-2">><%= event.updated_at %></div>
+        <div class="w-col w-col-2">><%= event.event_datetime %></div>
         <div class="w-col w-col-4">
           <div class="w-form">
             <form id="email-form" name="email-form" data-name="Email Form">
-              <%= link_to("Show", {:controller => 'public', :action => 'event', :permalink => event.permalink}, :class => 'action-button', target: "_blank") %>
+              <%= link_to("Show", {:action => 'show', :id => event.id}, :class => 'action-button', target: "_blank") %>
               <%= link_to("Edit", {:action => 'edit', :id => event.id}, :class => 'action-button') %>
               <%= link_to("Delete", {:action => 'delete', :id => event.id}, :class => 'action-button') %>
             </form>

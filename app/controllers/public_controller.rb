@@ -15,7 +15,7 @@ class PublicController < ApplicationController
     def event
       @event = Event.upcoming.live.where(:permalink => params[:permalink]).first
       if @event.nil?
-        redirect_to(:action => 'prigramme')
+        redirect_to(:action => 'programme')
       else
       end
       @venues = Venue.all
